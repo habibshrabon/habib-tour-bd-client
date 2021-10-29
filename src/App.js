@@ -6,6 +6,7 @@ import Packages from "./components/Packages/Packages";
 import Login from "./components/Login/Login";
 import Header from "./components/Header/Header";
 import AuthProvider from "./context/AuthProvider";
+import AddPackage from "./components/AddPackage/AddPackage";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path="/ourPackages">
               <Packages />
+            </Route>
+            <Route path="/addPackage">
+              <AddPackage />
             </Route>
             <Route path="/team"></Route>
             <Route path="/contactUs"></Route>
