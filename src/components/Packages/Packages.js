@@ -16,6 +16,10 @@ const Packages = () => {
     <div className="container">
       <div id="services">
         <h2 className="text-primary mt-5">Our services</h2>
+        <p>
+          Explore World, Customize Tour Packages, Lowest Rates, Guaranteed
+          Services.
+        </p>
         <div className="row">
           {packages.map((event) => (
             <Package key={event._id} package={event}></Package>

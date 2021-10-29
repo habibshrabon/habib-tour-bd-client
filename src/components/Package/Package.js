@@ -20,7 +20,7 @@ const Package = (props) => {
             <h3 className="card-title text-center">{name}</h3>
             {/* <p className="text-style">{description}</p> */}
             <button className="btn btn-warning px-3 ms-auto">
-              <FontAwesomeIcon icon={faArrowRight} /> Details
+              <FontAwesomeIcon icon={faArrowRight} /> Book
             </button>
           </div>
         </div>

@@ -69,8 +69,8 @@ const Footer = () => {
           <div className="col-md-6 col-lg-3">
             <h3>Contact Info</h3>
             <h3 className="text-brand">+123456789</h3>
-            <p>123, New Lenox, Chicago IL 60606</p>
-            <a href="#">info@yoursitename.com</a>
+            <p>15/E, Dhaka, Bangladesh </p>
+            <a href="#">info@habibtour_bd.com</a>
             <br />
             <br />
             <a href="#"></a>
