@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useFirebase from "../../hooks/useFirebase";
 
 const Header = () => {
+  const { user, logOut } = useFirebase();
   return (
     <Navbar className="bg-black" collapseOnSelect sticky="top" expand="lg ">
       <Container>
@@ -17,25 +19,29 @@ const Header = () => {
             <Nav.Link className="text-white" as={Link} to="/">
               Home
             </Nav.Link>
-            <Nav.Link className="text-white" as={Link} to="/packages">
+            <Nav.Link className="text-white" as={Link} to="/ourPackages">
               Our package
             </Nav.Link>
-            <Nav.Link className="text-white" as={Link} to="/doctors">
-              ......
+            <Nav.Link className="text-white" as={Link} to="/team">
+              Team
             </Nav.Link>
-            <Nav.Link className="text-white" as={Link} to="/appointment">
-              .....
+            <Nav.Link className="text-white" as={Link} to="/contactUs">
+              Contact Us
             </Nav.Link>
 
-            {/* {(<Nav.Link className="text-white">
-              <FontAwesomeIcon icon={faSignOutAlt} />
-              Logout
-            </Nav.Link>)(
+            {user?.email ? (
+              <Nav.Link className="text-white" onClick={logOut}>
+                <FontAwesomeIcon icon={faSignOutAlt} className="text-danger" />
+                Logout
+              </Nav.Link>
+            ) : (
               <Nav.Link className="text-white" as={Link} to="/login">
                 Login
               </Nav.Link>
             )}
-            <Nav.Link className=" px-3 text-white"></Nav.Link> */}
+            <Nav.Link className=" px-3 text-white">
+              {user?.displayName}
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

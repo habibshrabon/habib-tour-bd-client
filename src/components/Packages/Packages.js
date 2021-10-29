@@ -32,7 +32,7 @@ const Packages = () => {
                   Ullam, suscipit deleniti! Pariatur temporibus omnis minima!
                 </p>
                 <button className="btn btn-style px-3 ms-auto">
-                  <FontAwesomeIcon icon={faArrowRight} /> Details
+                  <FontAwesomeIcon icon={faArrowRight} /> Book Now
                 </button>
               </div>
             </div>
@@ -52,7 +52,7 @@ const Packages = () => {
                   Ullam, suscipit deleniti! Pariatur temporibus omnis minima!
                 </p>
                 <button className="btn btn-style px-3 ms-auto">
-                  <FontAwesomeIcon icon={faArrowRight} /> Details
+                  <FontAwesomeIcon icon={faArrowRight} /> Book Now
                 </button>
               </div>
             </div>
@@ -72,7 +72,7 @@ const Packages = () => {
                   Ullam, suscipit deleniti! Pariatur temporibus omnis minima!
                 </p>
                 <button className="btn btn-style px-3 ms-auto">
-                  <FontAwesomeIcon icon={faArrowRight} /> Details
+                  <FontAwesomeIcon icon={faArrowRight} /> Book Now
                 </button>
               </div>
             </div>

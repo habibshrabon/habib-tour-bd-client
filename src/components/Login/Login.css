@@ -1,0 +1,31 @@
+.login {
+  margin-top: 150px;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.center-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 15px;
+  height: auto;
+}
+
+.google {
+  background-color: #061939;
+  color: #fff;
+}
+.google:hover {
+  background-color: #fabb05;
+  color: black;
+}
+
+@media only screen and (max-width: 688px) {
+  .login {
+    width: 350px;
+  }
+  .google {
+    width: 200px;
+  }
+}
