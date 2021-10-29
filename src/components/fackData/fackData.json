@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "BALI INDONESIA",
+        "price": "20000",
+        "description": "Bali is an Indonesian island known for its forested volcanic mountains, iconic rice paddies, beaches and coral reefs. ",
+        "img": "https://i.ibb.co/2FNzQwY/indonesia.jpg"
+    },
+    {
+        "id": 2,
+        "name": "DELHI-AGRA-JAIPUR",
+        "price": "35000",
+        "description": "On arrival at delhi international airport, after clearing customs and immigration, come out of the exit gate.",
+        "img": "https://i.ibb.co/Gv2vcMT/agra.jpg"
+    },
+    {
+        "id": 3,
+        "name": "SINGAPORE SENTOSA",
+        "price": "160000",
+        "description": "Airport pick from hkt airport. Drop at mentioned hotel.Hotel check in& rest stay over night.",
+        "img": "https://i.ibb.co/3rdr58n/singapore.jpg"
+    },
+    {
+        "id": 4,
+        "name": "BANGKOK PATTAYA",
+        "price": "180000",
+        "description": "Having breakfast .Check out from hotel wait for our representative at hotel lobby to transfer to airport to go dac.",
+        "img": "https://i.ibb.co/4TyJNP8/bangkok.jpg"
+    },
+    {
+        "id": 5,
+        "name": "MALAYSIA",
+        "price": "100000",
+        "description": "Malaysia is a Southeast Asian country occupying parts of the Malay Peninsula and the island of Borneo. It's known for its beaches.",
+        "img": "https://i.ibb.co/sKZN4fz/malaysia.jpg"
+    },
+    {
+        "id": 6,
+        "name": "UMRAH HAJJ",
+        "price": "30000",
+        "description": "The ʿUmrah is an Islamic pilgrimage to Mecca that can be undertaken at any time of the year",
+        "img": "https://i.ibb.co/BjQ9bNp/umrah.jpg"
+    }
+]

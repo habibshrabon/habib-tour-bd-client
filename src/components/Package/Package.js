@@ -1,22 +1,25 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import "./Package.css";
 
-const Package = () => {
+const Package = (props) => {
+  // console.log("data", props.package);
+  const { _id, name, price, description, img } = props.package;
   return (
     <>
       <div className="col-md-4 mb-3 ">
-        <div className="card h-100 card-bg opacity box-shadow">
+        <div className="card h-100 card-bg opacity box-shadow img-style">
           <img
-            src=""
+            src={img}
             style={{ height: "275px" }}
             className="card-img-top justify-content-center align-items-center img-fluid"
-            alt="sakib"
+            alt="img"
           />
-          <div className="card-body">
-            <h3 className="card-title text-center">sakib</h3>
-            <p className="text-style">sakib</p>
-            <button className="btn btn-style px-3 ms-auto">
+          <div className="card-body d-flex">
+            <h3 className="card-title text-center">{name}</h3>
+            {/* <p className="text-style">{description}</p> */}
+            <button className="btn btn-warning px-3 ms-auto">
               <FontAwesomeIcon icon={faArrowRight} /> Details
             </button>
           </div>
