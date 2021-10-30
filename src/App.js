@@ -7,6 +7,7 @@ import Login from "./components/Login/Login";
 import Header from "./components/Header/Header";
 import AuthProvider from "./context/AuthProvider";
 import AddPackage from "./components/AddPackage/AddPackage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -24,11 +25,10 @@ function App() {
             <Route path="/ourPackages">
               <Packages />
             </Route>
+            <Route path="/manageOrder"></Route>
             <Route path="/addPackage">
               <AddPackage />
             </Route>
-            <Route path="/team"></Route>
-            <Route path="/contactUs"></Route>
             <Route path="/login">
               <Login />
             </Route>
@@ -36,6 +36,7 @@ function App() {
               <NotFound />
             </Route>
           </Switch>
+          <Footer />
         </Router>
       </AuthProvider>
     </div>

@@ -22,11 +22,8 @@ const Header = () => {
             <Nav.Link className="text-white" as={Link} to="/ourPackages">
               Our package
             </Nav.Link>
-            <Nav.Link className="text-white" as={Link} to="/team">
-              Team
-            </Nav.Link>
-            <Nav.Link className="text-white" as={Link} to="/contactUs">
-              Contact Us
+            <Nav.Link className="text-white" as={Link} to="/manageOrder">
+              Manage All Order
             </Nav.Link>
 
             {user?.email ? (
