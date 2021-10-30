@@ -10,6 +10,7 @@ import AddPackage from "./components/AddPackage/AddPackage";
 import Footer from "./components/Footer/Footer";
 import PackageDetails from "./components/PackageDetails/PackageDetails";
 import ManageOrder from "./components/ManageOrder/ManageOrder";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -24,18 +25,18 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/ourPackages">
+            <PrivateRoute path="/ourPackages">
               <Packages />
-            </Route>
+            </PrivateRoute>
             <Route path="/manageOrder">
               <ManageOrder />
             </Route>
             <Route path="/addPackage">
               <AddPackage />
             </Route>
-            <Route path="/packageDetails/:id">
+            <PrivateRoute path="/packageDetails/:id">
               <PackageDetails />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
