@@ -47,24 +47,18 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-md-6 col-lg-3">
-            <h3>Blog Feed</h3>
-            <a href="#">M3 E36 Cabrio</a>
-            <p>JULY 7, 2022</p>
+            <h3>Business</h3>
+            <a href="#">FAQ</a>
             <br />
-            <a href="#">Ordering a rinse is easy!</a>
-            <p>June 21 2022</p>
+            <a href="#">Supplier Login</a>
           </div>
           <div className="col-md-6 col-lg-3">
-            <h3>Services</h3>
-            <a href="#">Dry Clean Your Winter Coat</a>
+            <h3>Support</h3>
+            <a href="#">Our partners</a>
             <br />
-            <a href="#">Dry Clean</a>
+            <a href="#">Privacy policy</a>
             <br />
-            <a href="#">Ironing Services</a>
-            <br />
-            <a href="#">Laundry</a>Wash or Fold
-            <br />
-            <a href="#">Laundry Service London</a>
+            <a href="#">Terms Of Use</a>
           </div>
           <div className="col-md-6 col-lg-3">
             <h3>Contact Info</h3>
