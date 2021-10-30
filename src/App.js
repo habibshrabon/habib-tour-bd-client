@@ -8,6 +8,7 @@ import Header from "./components/Header/Header";
 import AuthProvider from "./context/AuthProvider";
 import AddPackage from "./components/AddPackage/AddPackage";
 import Footer from "./components/Footer/Footer";
+import PackageDetails from "./components/PackageDetails/PackageDetails";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
             <Route path="/manageOrder"></Route>
             <Route path="/addPackage">
               <AddPackage />
+            </Route>
+            <Route path="/packageDetails/:id">
+              <PackageDetails />
             </Route>
             <Route path="/login">
               <Login />
