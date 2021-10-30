@@ -19,7 +19,7 @@ const AddPackage = () => {
 
   return (
     <div className="add-package">
-      <h2>Please Add Package</h2>
+      <h2 className="text-center">Please Add Package</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           {...register("name", { required: true, maxLength: 20 })}

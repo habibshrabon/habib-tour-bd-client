@@ -14,7 +14,7 @@ const Packages = () => {
   }, []);
   return (
     <div className="container">
-      <div id="services">
+      <div className=" text-center">
         <h2 className="text-primary mt-5">Our services</h2>
         <p>
           Explore World, Customize Tour Packages, Lowest Rates, Guaranteed

@@ -9,6 +9,7 @@ import AuthProvider from "./context/AuthProvider";
 import AddPackage from "./components/AddPackage/AddPackage";
 import Footer from "./components/Footer/Footer";
 import PackageDetails from "./components/PackageDetails/PackageDetails";
+import ManageOrder from "./components/ManageOrder/ManageOrder";
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
             <Route path="/ourPackages">
               <Packages />
             </Route>
-            <Route path="/manageOrder"></Route>
+            <Route path="/manageOrder">
+              <ManageOrder />
+            </Route>
             <Route path="/addPackage">
               <AddPackage />
             </Route>
