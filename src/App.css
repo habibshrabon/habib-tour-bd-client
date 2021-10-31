@@ -8,3 +8,6 @@
   color: aliceblue;
   font-weight: bold;
 }
+.carousel-caption {
+  background-color: #000;
+}

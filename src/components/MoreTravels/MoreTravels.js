@@ -15,13 +15,20 @@ const MoreTravels = () => {
           <img className="img-fluid" src={dubai} alt="dubai" />
         </div>
         <div className="col-md-6">
-          <div className="col-md-6 mb-3 d-flex">
-            <img className="img-fluid" src={austria} alt="" />
-            <img className="img-fluid mx-5" src={turkey} alt="" />
-          </div>
-          <div className="col-md-6 d-flex">
-            <img className="img-fluid" src={egypt} alt="" />
-            <img className="img-fluid mx-5" src={chaina} alt="" />
+          <div className="row mb-3 d-flex">
+            <div className="col-md-6 mb-3">
+              <img className="img-fluid" src={austria} alt="" />
+            </div>
+            <div className="col-md-6 mb-3">
+              <img className="img-fluid" src={turkey} alt="" />
+            </div>
+
+            <div className="col-md-6 mb-3">
+              <img className="img-fluid" src={egypt} alt="" />
+            </div>
+            <div className="col-md-6 mb-3">
+              <img className="img-fluid" src={chaina} alt="" />
+            </div>
           </div>
         </div>
       </div>

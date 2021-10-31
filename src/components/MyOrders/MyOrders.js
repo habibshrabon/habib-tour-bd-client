@@ -37,7 +37,7 @@ const MyOrders = () => {
   return (
     <div className="bg-info py-5 user-orders">
       <Container>
-        <h2>Manage your Booked Packages.</h2>
+        <h2 className="text-center pb-4">Manage your Booked Packages.</h2>
 
         {userOrders.map((order) => (
           <div
@@ -49,18 +49,19 @@ const MyOrders = () => {
               <div className="col-md-6">
                 <img
                   src={order.order.img}
-                  className="img-fluid rounded-start"
+                  className="img-fluid p-2 rounded"
                   alt="..."
                 />
               </div>
               <div className="col-md-6">
                 <div className="card-body text-start px-5 px-md-3">
                   <h4 className="card-title">{order.order.name}</h4>
-                  <h5 className="fw-bold">
+                  <h5 className="fw-bold pb-2">
                     <FiDollarSign /> {order.order.price}
                   </h5>
 
-                  <div className="row-col ">
+                  <div className="d-flex">
+                    <button className="btn btn-primary me-3">Approved</button>
                     <button
                       className="btn btn-danger"
                       onClick={() => handleDelete(order._id)}
