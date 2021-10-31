@@ -6,13 +6,13 @@ const ManageOrder = () => {
   const [packages, setPackages] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/packages`)
+    fetch(`https://frightful-spirit-35719.herokuapp.com/packages`)
       .then((res) => res.json())
       .then((data) => setPackages(data));
   }, []);
 
   const handelDelete = (id) => {
-    const url = `http://localhost:5000/packages/${id}`;
+    const url = `https://frightful-spirit-35719.herokuapp.com/packages/${id}`;
     fetch(url, {
       method: "DELETE",
     })

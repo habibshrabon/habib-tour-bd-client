@@ -8,7 +8,7 @@ const MyOrders = () => {
   const [details, setDetails] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/packages/${id}`)
+    fetch(`https://frightful-spirit-35719.herokuapp.com/packages/${id}`)
       .then((res) => res.json())
       .then((data) => console.log(data));
   }, []);

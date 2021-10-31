@@ -9,12 +9,14 @@ const AddPackage = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    axios.post("http://localhost:5000/packages", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Added Successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://frightful-spirit-35719.herokuapp.com/packages", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Added Successfully");
+          reset();
+        }
+      });
   };
 
   return (
