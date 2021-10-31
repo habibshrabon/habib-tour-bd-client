@@ -1,14 +1,14 @@
+/* eslint-disable no-restricted-globals */
 import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useHistory, useParams } from "react-router";
+import { useParams } from "react-router";
 
 const PackageDetails = () => {
   const { id } = useParams();
   const [details, setDetails] = useState({});
-  // const history = useHistory();
   const { register, handleSubmit, reset } = useForm();
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const PackageDetails = () => {
       .post("https://frightful-spirit-35719.herokuapp.com/orders", data)
       .then((res) => {
         if (res.data.insertedId) {
-          // history.push("/myOrders");
+          confirm("You are Submitted an ordered!!");
           reset();
         }
       });
@@ -46,7 +46,7 @@ const PackageDetails = () => {
       </div>
 
       <div className="add-package mt-5">
-        <h2 className="text-center">Booking</h2>
+        <h2 className="text-center">Booking Packages</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input {...register("name", { required: true })} placeholder="Name" />
           <input
@@ -54,11 +54,13 @@ const PackageDetails = () => {
             placeholder="Email"
           />
           <input
+            {...register("phone", { required: true })}
+            placeholder="Phone Number"
+          />
+          <input
             {...register("address", { required: true })}
             placeholder="Address"
           />
-          {/* <input type="number" {...register("price")} placeholder="Price" />
-          <input {...register("img")} placeholder="Image" /> */}
           <input type="submit" />
         </form>
       </div>

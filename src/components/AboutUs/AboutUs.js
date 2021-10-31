@@ -3,10 +3,12 @@ import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
-    <div className="container">
-      <h2 className="fw-bold text-center">ABOUT US</h2>
-      <div className="about-container">
-        <p>
+    <div className="about-container">
+      <div className="container">
+        <h2 className="fw-bold text-center text-black fw-bold mt-5">
+          ABOUT US
+        </h2>
+        <p className="text-white text-center mt-5">
           Habib Tour and BD is one of the best travel agency in Dhaka
           Bangladesh. We specializes in Corporate, Group or Individual travel
           management. We build the foundation of a company by offering
