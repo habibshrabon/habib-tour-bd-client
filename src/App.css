@@ -1,3 +1,10 @@
 .img-style:hover {
   color: red;
 }
+.style {
+  background-color: #70c770;
+}
+.style:hover {
+  color: aliceblue;
+  font-weight: bold;
+}

@@ -4,7 +4,7 @@ import "./AboutUs.css";
 const AboutUs = () => {
   return (
     <div className="container">
-      <h2>ABOUT US</h2>
+      <h2 className="fw-bold text-center">ABOUT US</h2>
       <div className="about-container">
         <p>
           Habib Tour and BD is one of the best travel agency in Dhaka

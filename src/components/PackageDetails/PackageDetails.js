@@ -1,34 +1,34 @@
+import axios from "axios";
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import { useParams } from "react-router";
+import { useForm } from "react-hook-form";
+import { useHistory } from "react-router";
 
 const PackageDetails = () => {
-  const { id } = useParams();
-  const [details, setDetails] = useState({});
+  const history = useHistory();
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/packages/${id}`)
-      .then((res) => res.json())
-      .then((data) => setDetails(data));
-  }, []);
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    axios.post("http://localhost:5000/orders", data).then((res) => {
+      if (res.data.insertedId) {
+        history.push("/myOrders");
+        reset();
+      }
+    });
+  };
 
   return (
-    <div className="container">
-      <h2 className="my-5 text-info text-center">Our Package Details</h2>
-      <div className="card my-3">
-        <img
-          style={{ height: "430px" }}
-          src={details.img}
-          class="card-img-top img-style"
-          alt="..."
+    <div className="add-package">
+      <h2 className="text-center">Booking</h2>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input
+          {...register("name", { required: true, maxLength: 20 })}
+          placeholder="Name"
         />
-        <div className="card-body  text-center">
-          <h5 className="card-title">{details.name}</h5>
-          <p className="card-text">{details.description}</p>
-          <h6>Package Price: BDT {details.price}</h6>
-        </div>
-      </div>
+        <textarea {...register("description")} placeholder="Description" />
+        <input type="number" {...register("price")} placeholder="Price" />
+        <input {...register("img")} placeholder="Image" />
+        <input type="submit" />
+      </form>
     </div>
   );
 };

@@ -16,10 +16,10 @@ const Package = (props) => {
             className="card-img-top justify-content-center align-items-center img-fluid"
             alt="img"
           />
-          <div className="card-body d-flex">
+          <div className="card-body d-flex px-2">
             <h3 className="card-title text-center">{name}</h3>
             <Link to={`/packageDetails/${_id}`}>
-              <button className="btn btn-warning  ps-3 ms-auto">
+              <button className="btn style px-3 ms-auto">
                 <FontAwesomeIcon icon={faArrowRight} /> BOOK
               </button>
             </Link>

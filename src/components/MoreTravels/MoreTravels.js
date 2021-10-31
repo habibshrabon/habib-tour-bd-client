@@ -8,8 +8,8 @@ import turkey from "../../images/turkey.jpg";
 const MoreTravels = () => {
   return (
     <div>
-      <section className="container content-height">
-        <h2 className="text-center py-5">TOP OUR PACKAGES</h2>
+      <section className="container">
+        <h2 className="text-center fw-bold">TOP OUR PACKAGES</h2>
         <hr />
         <div className="row">
           <div className="col-md-6">

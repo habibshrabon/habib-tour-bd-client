@@ -9,8 +9,9 @@ const Footer = () => {
     <div className="footer-area mt-5 py-5 ">
       <Container>
         <footer className="row">
-          <div className="col-md-6 col-lg-3">
-            <h2 className="text-warning">HABIB TOUR BD</h2>
+          <div className="col-md-6 col-lg-3 text-white fw-bold">
+            <h4>HABIB TOUR BD</h4>
+            <h5>Partners</h5>
             <img
               className="img-fluid"
               src="https://www.kokilabenhospital.com/images/reliance_logo.png"

@@ -1,19 +1,3 @@
-// import React from "react";
-// import useFirebase from "../../hooks/useFirebase";
-
-// const Login = () => {
-//   const { signInUsingGoogle } = useFirebase();
-//   return (
-//     <div>
-//       <button onClick={signInUsingGoogle} className="btn btn-warning">
-//         Google Sign In
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Login;
-
 import React, { useState } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -26,9 +10,11 @@ const Login = () => {
     handleUserLogin,
     handleUserName,
   } = useAuth();
+
   const location = useLocation();
   const history = useHistory();
   const redirect_url = location.state?.from || "/home";
+
   const handleGoogleLogin = () => {
     signInUsingGoogle().then((result) => {
       history.push(redirect_url);
@@ -83,11 +69,11 @@ const Login = () => {
   };
   return (
     <div
-      className="text-center container login box-shadow mb-5 mt-5"
+      className="text-center container login box-shadow mb-5 mt-5 form-bg"
       style={{ maxWidth: "600px" }}
     >
-      <form onSubmit={handleSignUp}>
-        <h3 className="text-info pb-5">
+      <form onSubmit={handleSignUp} className="">
+        <h3 className="text-black fw-bold pb-5">
           Please {isLogin ? "Login" : "Register"}
         </h3>
         {!isLogin && (
@@ -161,7 +147,7 @@ const Login = () => {
         className="google center-style rounded-pill px-3 py-3 mx-auto"
         onClick={handleGoogleLogin}
       >
-        Continue with Google  
+        SignIn with Google  
       </button>
     </div>
   );

@@ -2,7 +2,6 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
-import Packages from "./components/Packages/Packages";
 import Login from "./components/Login/Login";
 import Header from "./components/Header/Header";
 import AuthProvider from "./context/AuthProvider";
@@ -11,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import PackageDetails from "./components/PackageDetails/PackageDetails";
 import ManageOrder from "./components/ManageOrder/ManageOrder";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import MyOrders from "./components/MyOrders/MyOrders";
 
 function App() {
   return (
@@ -25,8 +25,8 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <PrivateRoute path="/ourPackages">
-              <Packages />
+            <PrivateRoute path="/myOrders">
+              <MyOrders />
             </PrivateRoute>
             <Route path="/manageOrder">
               <ManageOrder />
