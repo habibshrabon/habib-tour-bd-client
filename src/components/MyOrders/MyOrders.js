@@ -4,17 +4,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import useAuth from "../../hooks/useAuth";
-
-import { GrLocation } from "react-icons/gr";
 import { FiDollarSign } from "react-icons/fi";
-import { AiOutlineSchedule } from "react-icons/ai";
 
 const MyOrders = () => {
   const { user } = useAuth();
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    fetch("https://frightful-spirit-35719.herokuapp.com/orders")
+    fetch("https://frightful-spirit-35719.herokuapp.com/orders/")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, []);
@@ -30,7 +27,7 @@ const MyOrders = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount) {
-          confirm("You are deleting an ordered event!!");
+          confirm("You are deleting an ordered package!!");
           const remaining = allOrders.filter((event) => event._id !== id);
           setAllOrders(remaining);
         }
@@ -58,16 +55,9 @@ const MyOrders = () => {
               </div>
               <div className="col-md-6">
                 <div className="card-body text-start px-5 px-md-3">
-                  <h4 className="card-title">{order.order.eventName}</h4>
-                  <h6 className="pb-1">
-                    <GrLocation /> {order.order.location}
-                  </h6>
-
-                  <h6 className="pb-1">
-                    <AiOutlineSchedule /> {order.order.schedule}
-                  </h6>
+                  <h4 className="card-title">{order.order.name}</h4>
                   <h5 className="fw-bold">
-                    <FiDollarSign /> {order.order.cost}
+                    <FiDollarSign /> {order.order.price}
                   </h5>
 
                   <div className="row-col ">
